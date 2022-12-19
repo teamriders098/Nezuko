@@ -41,11 +41,13 @@ module.exports = async (client, m, commands, chatUpdate) => {
         let pushname =  m.pushName || 'NO name'
         let participants = isGroup ? metadata.participants : [sender]
         const groupName = isGroup ? metadata.subject : ''
-	 const iscreator = [...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+        const iscreator = [...global.owner].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
+        // const isuser2 = [...global.user].map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender)
         let groupAdmin = isGroup ? participants.filter(v => v.admin !== null).map(v => v.id) : []
         const botNumber = await client.decodeJid(client.user.id)
         let isBotAdmin = isGroup ? groupAdmin.includes(botNumber) : false
         let isAdmin = isGroup ? groupAdmin.includes(sender) : false
+        const isuser = m.sender
    //////////Database\\\\\\\\\\\\\\\\
    const _mods=await db.get('mods')
    global.mods= _mods || []
@@ -112,7 +114,7 @@ if(text.endsWith("--info")){
     }    
     return client.sendMessage(m.from,buth,{quoted:m})
 }
-if(!isGroup&& cmd && !iscreator) return m.reply("*You cant use commands in dm*")
+if(!isuser && cmd) return m.reply("*Baka Invalid Command*")
 if (cmd) {
     if(ban.includes(`${m.sender}`)) return m.reply(`You are banned from using commands ❌`)
   }

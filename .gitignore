@@ -1,0 +1,5 @@
+*sh
+*bak
+node_module
+node_modules
+*sqlite

@@ -1,7 +1,7 @@
 require ('../../../settings')
 module.exports = {
-	name: "ping",
-	alias: ["tagall"],
+	name: "ping2",
+	alias: ["hidetag"],
 	desc: "Tags all the members",
     usage:`${prefa}ping / =ping <text>`,
     react:"✅",
@@ -42,10 +42,11 @@ members.push(memNum.id)
  } //members_id.push(memNum.jid)
 
 }
+/*
 for (let i = 0; i < admins.length; i++){ menText += `${i === 0 ? '\n\n' : '\n'}Tagged To Admins \n🥇 *@${admins[i].split('@')[0]}*`}
 for (let i = 0; i < members.length; i++){
 menText+= `${i === 0 ? '\n\n' : '\n'}n'}Tagged To Members \n🥈 *@${members[i].split('@')[0]}*`
-}  
+}  */
 client.sendMessage(m.from,{text:menText,mentions: participants.map(a => a.id)},{quoted:m})
     }
     }

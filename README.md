@@ -41,7 +41,7 @@
 
 ## KOYEB 
 
-[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/apps/deploy?type=docker&image=quay.io/raysenpai69/koyeb-auto-install:main&env%5BPORT%5D=8000&env%5BPREFIX%5D&&env%5BMONGODB%5D&&env%5BDATABASE_URL%5D&&env%5BWEATHER_API%5D&&env%5BGOOGLE_API%5D&&env%5BMODS%5D&name=nezuko)
+[![Deploy to Koyeb](https://www.koyeb.com/static/images/deploy/button.svg)](https://app.koyeb.com/apps/deploy?type=docker&image=raysenpai/nezuko:latest&env%5BPORT%5D=8000&env%5BPREFIX%5D&&env%5BMONGODB%5D&&env%5BDATABASE_URL%5D&&env%5BWEATHER_API%5D&&env%5BGOOGLE_API%5D&&env%5BMODS%5D&name=nezuko)
 
 ## Clone this project
 ```bash
@@ -57,7 +57,11 @@ you've just cloned!!
 > yarn start
 
 To keep it on forever
- > node kyoeb.js
+
+ > npm i pm2
+> pm2 start heart.js
+ > pm2 save 
+> pm2 logs
 ```
 ## HELP
 > Please give this repo a ⭐ if you liked it.
@@ -81,8 +85,8 @@ Modifier | Modifier |
 ---|---
 [Toshi_Sama](https://github.com/Toshi-san001)  | [Arin](https://github.com/Arin1601)
 Useless Worker | Contributor |
-<a href="https://github.com/Debanjan-San"><img src="https://github.com/Debanjan-San.png?size=100" width="100" height="100"></a> | [![Alι_Aryαɴ](https://github.com/AliAryanTech.png?size=100)](https://github.com/AliAryanTech) 
-[Debanjan-San](https://github.com/Debanjan-San)  | [Alι_Aryαɴ](https://github.com/AliAryanTech)
+<a href="https://github.com/iamherok"><img src="https://github.com/iamherok.png?size=100" width="100" height="100"></a> | [![Alι_Aryαɴ](https://github.com/AliAryanTech.png?size=100)](https://github.com/AliAryanTech) 
+[Tomioka](https://github.com/iamherok)  | [Alι_Aryαɴ](https://github.com/AliAryanTech)
 Contributor | Contributor |
 <a href="https://github.com/FantoX001"><img src="https://github.com/FantoX001.png?size=100" width="100" height="100"></a> | [![Well/300>](https://github.com/well300.png?size=100)](https://github.com/well300)
 [Fantox](https://github.com/FanotX001)   | [Well/300>](https://github.com/well300)
